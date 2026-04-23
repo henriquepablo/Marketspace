@@ -2,8 +2,9 @@ import { LogoApp } from "@/assets"
 import { ButtonCreateAccount, ButtonCreateAccountText, ButtonLogin, ButtonLoginText, ButtonPhoto, Container, Description, Footer, Form, Header, Input, Logo, Title, ViewIconEdit } from "./styles"
 import { PencilSimpleLineIcon, UserIcon } from 'phosphor-react-native'
 import { KeyboardAvoidingView, Platform, ScrollView } from "react-native"
+import { useRegisteriewModel } from "./useRegister.viewModel"
 
-const RegisterView: React.FC = () => {
+const RegisterView: React.FC<ReturnType<typeof useRegisteriewModel>> = ({ name, setName, email, setEmail, phone, setPhone, password, setPassword, confirmPassword, setConfirmPassword, handleRegister, backToLogin  }) => {
     return (
         <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
             <ScrollView 
@@ -52,7 +53,7 @@ const RegisterView: React.FC = () => {
                             secureTextEntry
                         />
 
-                        <ButtonCreateAccount>
+                        <ButtonCreateAccount onPress={handleRegister}>
                             <ButtonCreateAccountText>
                                 Criar
                             </ButtonCreateAccountText>
@@ -65,7 +66,7 @@ const RegisterView: React.FC = () => {
                             Já possui conta?
                         </Description>
 
-                        <ButtonLogin>
+                        <ButtonLogin onPress={backToLogin}>
                             <ButtonLoginText>
                                 Ir para o Login
                             </ButtonLoginText>
