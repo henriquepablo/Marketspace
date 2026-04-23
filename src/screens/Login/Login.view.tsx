@@ -1,6 +1,7 @@
 import { LogoApp } from "@/assets"
 import { ButtonCreateAccount, ButtonCreateAccountText, ButtonLogin, ButtonLoginText, Container, Content, Description, Footer, Form, Input, Logo, Title } from "./styles"
-import { useAuthViewModel } from "./useAuth.viewModel"
+import { useAuthViewModel } from "./useLogin.viewModel"
+import { router } from "expo-router"
 
 const AuthView: React.FC<ReturnType<typeof useAuthViewModel>> = ({ email, setEmail, password, setPassword, handleLogin }) => {
     return (
@@ -46,7 +47,7 @@ const AuthView: React.FC<ReturnType<typeof useAuthViewModel>> = ({ email, setEma
                     Ainda não tem acesso?
                 </Description>
 
-                <ButtonCreateAccount>
+                <ButtonCreateAccount onPress={() => router.navigate('/(public)/signup')}>
                     <ButtonCreateAccountText>
                         Criar Conta
                     </ButtonCreateAccountText>

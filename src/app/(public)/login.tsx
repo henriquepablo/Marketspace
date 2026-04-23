@@ -1,5 +1,5 @@
-import AuthView from "@/screens/Auth/Auth.view";
-import { useAuthViewModel } from "@/screens/Auth/useAuth.viewModel";
+import AuthView from "@/screens/Login/Login.view";
+import { useAuthViewModel } from "@/screens/Login/useLogin.viewModel";
 
 export default function Login() {
 
