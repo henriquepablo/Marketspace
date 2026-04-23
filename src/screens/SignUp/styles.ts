@@ -5,7 +5,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
     flex: 1;
     background-color: ${colors.gray[600]};
-    padding: 56px 48px;
+    padding: 5px 48px;
 `;
 
 export const Header = styled.View`
