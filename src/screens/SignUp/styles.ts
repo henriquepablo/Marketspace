@@ -69,3 +69,41 @@ export const Input = styled.TextInput`
     padding-left: 10px;
     font-family: ${fonts.regular};
 `;
+
+export const ButtonCreateAccount = styled.TouchableOpacity`
+    background-color: ${colors.gray[100]};
+    height: 45px;
+    border-radius: 6px;
+    width: 279px;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const ButtonCreateAccountText = styled.Text`
+    color: ${colors.gray[700]};
+    font-size: 14px;
+    font-family: ${fonts.bold};
+`;
+
+export const Footer = styled.View`
+    margin-top: 20px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+`;
+
+export const ButtonLogin = styled.TouchableOpacity`
+    height: 45px;
+    width: 279px;
+    background-color: ${colors.gray[500]};
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+`;
+
+export const ButtonLoginText = styled.Text`
+    color: ${colors.gray[200]};
+    font-size: 14px;
+    font-family: ${fonts.bold};
+`;

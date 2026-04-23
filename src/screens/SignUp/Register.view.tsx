@@ -1,5 +1,5 @@
 import { LogoApp } from "@/assets"
-import { ButtonPhoto, Container, Description, Form, Header, Input, Logo, Title, ViewIconEdit } from "./styles"
+import { ButtonCreateAccount, ButtonCreateAccountText, ButtonLogin, ButtonLoginText, ButtonPhoto, Container, Description, Footer, Form, Header, Input, Logo, Title, ViewIconEdit } from "./styles"
 import { PencilSimpleLineIcon, UserIcon } from 'phosphor-react-native'
 import { KeyboardAvoidingView, Platform } from "react-native"
 
@@ -33,17 +33,40 @@ const RegisterView: React.FC = () => {
                     />
                     <Input
                         placeholder='E-mail'
+                        keyboardType="email-address"
+                        autoCapitalize="none"
                     />
                     <Input
-                        placeholder='Telefone'
+                        placeholder='Telefone'  
                     />
                     <Input
                         placeholder='Senha'
+                        secureTextEntry
                     />
                     <Input
                         placeholder='Confirmar senha'
+                        secureTextEntry
                     />
+
+                    <ButtonCreateAccount>
+                        <ButtonCreateAccountText>
+                            Criar
+                        </ButtonCreateAccountText>
+                    </ButtonCreateAccount>
                 </Form>
+
+
+                <Footer>
+                    <Description>
+                        Já possui conta?
+                    </Description>
+
+                    <ButtonLogin>
+                        <ButtonLoginText>
+                            Ir para o Login
+                        </ButtonLoginText>
+                    </ButtonLogin>
+                </Footer>
             </Container>
         </KeyboardAvoidingView>
     )
