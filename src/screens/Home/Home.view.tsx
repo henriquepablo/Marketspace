@@ -2,6 +2,7 @@ import { TouchableOpacity, View } from "react-native";
 import { ButtonMyAnnoun, ButtonMyAnnounText, ButtonNew, ButtonNewText, Container, ContainerInput, ContainerProducts, Description, Header, Input, Name, Photo, QuantityAnnounActivy, TextAnnounActivy, Title } from "./styles";
 import { ArrowRightIcon, MagnifyingGlassIcon, PlusIcon, SlidersIcon, TagIcon } from "phosphor-react-native";
 import { colors } from "@/constants/colors";
+import AnnouncementCard from "@/components/AnnouncementCard/AnnouncementCard";
 
 const HomeView: React.FC = () => {
     return (
@@ -81,6 +82,8 @@ const HomeView: React.FC = () => {
                     </TouchableOpacity>
                 </View>
             </ContainerInput>
+
+            <AnnouncementCard />
         </Container>
     )
 }
