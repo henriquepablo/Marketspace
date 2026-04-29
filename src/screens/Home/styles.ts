@@ -110,3 +110,97 @@ export const Input = styled.TextInput`
     background-color: ${colors.gray[700]};
     height: 45px;
 `;
+
+export const Overlay = styled.View`
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+`;
+
+export const ContentModal = styled.View`
+    flex: 2;
+    background-color: ${colors.gray[600]};
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    margin-top: -20px;
+    padding: 24px 24px;
+`;
+
+export const HeaderModal = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+export const TitleModal = styled.Text`
+    font-size: 20px;
+    font-family: ${fonts.bold};
+    color: ${colors.gray[100]};
+`;
+
+export const TextModal = styled.Text`
+    font-size: 14px;
+    font-family: ${fonts.bold};
+    color: ${colors.gray[200]};
+    margin-top: 20px;
+    margin-bottom: 20px;
+`;
+
+export const ContainerButton = styled.View`
+    flex-direction: row;
+`;
+
+export const ConditionButton = styled.TouchableOpacity<{active: boolean}>`
+    background-color: ${({ active }) => active ? colors.blueLight : colors.gray[500]};
+    width: 76px;
+    height: 28px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4px;
+    margin-right: 10px;
+`;
+
+export const ConditionButtonText = styled.Text<{active: boolean}>`
+    color: ${({active}) => active ? colors.gray[600] : colors.gray[300]};
+    font-size: 14px;
+    font-family: ${fonts.bold};
+`;
+
+export const BottomModal = styled.View`
+    flex: 1;
+    align-items: flex-end;
+    gap: 20px;
+    flex-direction: row;
+    margin-bottom: 15px;
+`;
+
+export const ResetFiltersButton = styled.TouchableOpacity`
+    justify-content: center;
+    align-items: center;
+    background-color: ${colors.gray[500]};
+    height: 42px;
+    flex: 1;
+    border-radius: 6px;
+`;
+
+export const ResetFiltersButtonText = styled.Text`
+    color: ${colors.gray[200]};
+    font-size: 14px;
+    font-family: ${fonts.bold};
+`;
+
+export const ApplyFiltersButton = styled.TouchableOpacity`
+    justify-content: center;
+    align-items: center;
+    background-color: ${colors.gray[100]};
+    height: 42px;
+    flex: 1;
+    border-radius: 6px;
+`;
+
+export const ApplyFiltersButtonText = styled.Text`
+    color: ${colors.gray[700]};
+    font-size: 14px;
+    font-family: ${fonts.bold};
+`;
